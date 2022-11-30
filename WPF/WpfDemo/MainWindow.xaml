@@ -1,0 +1,54 @@
+﻿<Window x:Class="WpfDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDemo"
+        xmlns:PathBtn="clr-namespace:Wpf.UI.Control;assembly=Wpf.UI.Control"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1080" Width="1920" Loaded="Window_Loaded">
+    <Grid>
+        <PathBtn:PathButton x:Name="PathBtn_Ag0"
+                            Width="200"
+                            Height="200"
+                            PathData="M -100,-173.20 A 200,200,0 0 1,100,-173.2 L0,0z"
+                            FillBrush="#FF5BCCDA" MouseEnter="PathBtn_Ag0_MouseEnter" MouseLeave="PathBtn_Ag0_MouseLeave"
+                            />
+        <PathBtn:PathButton x:Name="PathBtn_Ag60"
+                            RenderTransformOrigin="0.5,1"
+                            Width="200"
+                            Height="200"
+                            PathData="M -100,-173.20 A 200,200,0 0 1,100,-173.2 L0,0z"
+                            FillBrush="#FF5BCCDA" MouseEnter="PathBtn_Ag60_MouseEnter" MouseDown="PathBtn_Ag60_MouseDown" Click="PathBtn_Ag60_Click"
+                            >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="60"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </PathBtn:PathButton>
+        <PathBtn:PathButton x:Name="PathBtn_Ag120"
+                            RenderTransformOrigin="0.5,1"
+                            Width="200"
+                            Height="200"
+                            PathData="M -100,-173.20 A 200,200,0 0 1,100,-173.2 L0,0z"
+                            FillBrush="#FF5BCCDA" 
+                            
+                            MouseDown="PathBtn_Ag120_MouseDown" 
+                            MouseLeftButtonDown="PathBtn_Ag120_MouseLeftButtonDown"
+                            MouseLeftButtonUp="PathBtn_Ag120_MouseLeftButtonUp"
+                            >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="120"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </PathBtn:PathButton>
+    </Grid>
+</Window>
